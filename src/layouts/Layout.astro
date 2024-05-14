@@ -1,4 +1,7 @@
 ---
+import Navbar from '@/components/Navbar.astro';
+import ThemeHeadScript from '@/components/theme-head-script.astro';
+
 interface Props {
 	title: string;
 }
@@ -15,8 +18,12 @@ const { title = "What I Use - Danny Bao" } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<ThemeHeadScript />
 	</head>
 	<body>
+		<Navbar></Navbar>
+
 		<slot />
 	</body>
 </html>
