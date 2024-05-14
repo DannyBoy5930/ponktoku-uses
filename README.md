@@ -52,3 +52,16 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## 📋 TODOs
+
+- [ ] Scaffold UI
+- [ ] Implement Dark and Light Mode via Edward Kim article (add React and Shadcn Dropdown)
+- [ ] Scaffold Navbar and Footer
+- [ ] Add mdx and create test post
+- [ ] Create card components for homepage
+- [ ] List all posts as Cards on homepage
+- [ ] Optimise Images
+- [ ] Add Tailwind typography for prose
+- [ ] Add rest of tech posts
+- [ ] Deploy to Vercel
