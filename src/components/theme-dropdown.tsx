@@ -6,7 +6,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 
-import { MoonIcon, SunIcon } from "./ui/icons";
+import { MoonIcon, SunIcon } from "@radix-ui/react-icons";
 
 export default function ThemeDropdown() {
   const onClickLight = () => {
