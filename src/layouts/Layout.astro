@@ -1,6 +1,7 @@
 ---
 import Navbar from '@/components/Navbar.astro';
 import ThemeHeadScript from '@/components/theme-head-script.astro';
+import Footer from '@/components/Footer.astro'
 
 interface Props {
 	title: string;
@@ -22,8 +23,12 @@ const { title = "What I Use - Danny Bao" } = Astro.props;
 		<ThemeHeadScript />
 	</head>
 	<body>
-		<Navbar></Navbar>
+		<Navbar />
 
-		<slot />
+		<main>
+			<slot />
+		</main>
+
+		<Footer />
 	</body>
 </html>
