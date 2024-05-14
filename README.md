@@ -57,6 +57,7 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 
 - [ ] Scaffold UI
 - [ ] Implement Dark and Light Mode via Edward Kim article (add React and Shadcn Dropdown)
+- [ ] Prettier-astro and prettier-tailwind packages
 - [ ] Scaffold Navbar and Footer
 - [ ] Add mdx and create test post
 - [ ] Create card components for homepage
