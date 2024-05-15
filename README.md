@@ -66,3 +66,8 @@ Feel free to check [our documentation](https://docs.astro.build) or jump into ou
 - [ ] Add Tailwind typography for prose
 - [ ] Add rest of tech posts
 - [ ] Deploy to Vercel
+
+### Non-MVP Todo List
+
+- [ ] Add multi-language, maybe I'll write the posts in Japanese
+- [ ] Add categories you can filter the posts by in the navbar
