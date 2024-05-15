@@ -1,8 +1,20 @@
 ---
 import ThemeDropdown from "./theme-dropdown"
+import { GitHubLogoIcon } from "@radix-ui/react-icons"
 ---
 
-<nav>
+<nav class="flex items-center justify-between mb-14">
+
+  <div class="flex gap-10">
+    <a href="">
+      <h2 class="font-semibold">Danny Bao</h2>
+    </a>
+    <div class="flex gap-5">
+      <a href="https://www.ponktoku.dev/" target="_blank" rel="noopener noreferrer">About</a>
+      <a href="https://github.com/DannyBoy5930/ponktoku-uses" class="flex items-center gap-1">
+        <GitHubLogoIcon />
+        Source</a>
+    </div>
+  </div>
   <ThemeDropdown client:load></ThemeDropdown>
 </nav>
-
