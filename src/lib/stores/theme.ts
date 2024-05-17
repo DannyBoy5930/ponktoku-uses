@@ -14,7 +14,7 @@ export const STORAGE_THEME_KEY = "theme" as const;
 
 export const themeStore = persistentAtom<ThemeValue>(
   STORAGE_THEME_KEY,
-  THEME_MAP.system
+  THEME_MAP.system,
 );
 
 const initThemeStoreSubscribe = () => {
