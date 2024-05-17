@@ -1,6 +1,7 @@
 ---
 import ThemeDropdown from "./theme-dropdown"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
+import "@fontsource-variable/lora";
 ---
 
 <nav class="flex items-center justify-between mb-14">
@@ -17,3 +18,9 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons"
   </div>
   <ThemeDropdown client:load></ThemeDropdown>
 </nav>
+
+<style>
+  nav {
+    font-family: 'Lora Variable', serif;
+  }
+</style>
