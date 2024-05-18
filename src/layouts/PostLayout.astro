@@ -6,12 +6,10 @@ interface Props {
 }
 
 const { title = "What I Use - Danny Bao" } = Astro.props;
-
-const { Content } = await post.render();
 ---
 
 <MainLayout title="What I Use">
   <article>
-    <Content></Content>
+    <slot></slot>
   </article>
 </MainLayout>

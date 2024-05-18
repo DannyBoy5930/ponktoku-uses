@@ -1,6 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '@/styles/global.css'
+
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+const allPosts: CollectionEntry<'posts'>[] = (
+	await getCollection('posts')
+).sort((a, b) => a.data.updatedAt.valueOf() - b.data.updatedAt.valueOf());
+
+console.log(allPosts)
 ---
 
 <Layout title="What I Use - Danny Bao">
@@ -9,6 +17,10 @@ import '@/styles/global.css'
 		<h2>A curated list of the tech I <span class="text-orange-500">use</span></h2>
 		<p class="text-accent">Accent colour difference</p>
 		<p>This website is primarily inspired by devaslife's page of the tech he uses. As a developer I wanted to give my own try of making a similar website to show off the daily items and tech that I use. If you've made it here thanks for stopping by.</p>
+	</section>
+
+	<section>
+		
 	</section>
 
 	<section>
