@@ -8,7 +8,7 @@ interface Props {
 const { title = "What I Use - Danny Bao" } = Astro.props;
 ---
 
-<MainLayout title="What I Use">
+<MainLayout title={title}>
   <article>
     <slot></slot>
   </article>
