@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import PostLayout from '@/layouts/PostLayout.astro';
 import { Image } from 'astro:assets';
+import Prose from "@/components/Prose.astro";
 
 export async function getStaticPaths() {
   const allPosts = await getCollection('posts');
@@ -18,11 +19,13 @@ const { Content } = await entry.render();
 
 <PostLayout title={`I use ${title} - Danny Bao`}>
   <div>
-    <Image src={image.url} alt={image.alt} width={648} height={400} class="border border-slate-300 dark:border-zinc-700 rounded-xl mb-4"></Image>
+    <Image src={image.url} alt={image.alt} width={640} height={400} class="border border-slate-300 dark:border-zinc-700 rounded-xl mb-4"></Image>
     <h1 class="font-lora text-xl">{title}</h1>
-    <h2 class="text-lg">{description}</h2>
+    <h2 class="font-lora text-lg">{description}</h2>
     <hr class="dark:border-zinc-700 my-4"></hr>
   </div>
   
-  <Content />
+  <Prose>
+    <Content />
+  </Prose>
 </PostLayout>
