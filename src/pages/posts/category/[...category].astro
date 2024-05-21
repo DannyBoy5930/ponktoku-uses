@@ -6,7 +6,7 @@ import { getCollection, type CollectionEntry } from "astro:content";
 export async function getStaticPaths() {
   const allPosts: CollectionEntry<"posts">[] = (
     await getCollection("posts")
-  )
+  ).sort((a, b) => a.data.updatedAt.valueOf() - b.data.updatedAt.valueOf());
 
   const uniqueCategories = [
     ...new Set(allPosts.map((entry) => entry.data.category).flat()),
