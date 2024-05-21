@@ -2,6 +2,17 @@
 import ThemeDropdown from "./theme-dropdown"
 import { GitHubLogoIcon } from "@radix-ui/react-icons"
 import "@fontsource-variable/lora";
+import CategoryDropdown from "./category-dropdown";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const allPosts: CollectionEntry<'posts'>[] = await getCollection("posts");
+const allCategories: string[] = [] ;
+allPosts.map(post => {
+  allCategories.push(post.data.category) 
+});
+const uniqueCategories = [...new Set<string>(allCategories)];
+const sortedCategories = uniqueCategories.sort();
+
 ---
 
 <nav class="flex items-center justify-between mb-14">
@@ -16,7 +27,10 @@ import "@fontsource-variable/lora";
         Source</a>
     </div>
   </div>
-  <ThemeDropdown client:load></ThemeDropdown>
+  <div>
+    <ThemeDropdown client:load></ThemeDropdown>
+    <CategoryDropdown client:load categories={sortedCategories}></CategoryDropdown>
+  </div>
 </nav>
 
 <style>
