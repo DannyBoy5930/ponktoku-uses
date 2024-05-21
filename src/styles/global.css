@@ -33,6 +33,25 @@
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
+
+    /* Bepyan Colors */
+    --gray-50: #ffffff;
+    --gray-75: #fdfdfd;
+    --gray-100: #f8f8f8;
+    --gray-200: #e6e6e6;
+    --gray-300: #d5d5d5;
+    --gray-400: #b1b1b1;
+    --gray-500: #909090;
+    --gray-600: #6d6d6d;
+    --gray-700: #464646;
+    --gray-800: #222222;
+    --gray-900: #000000;
+    --gray-950: #000000;
+
+    --heading: var(--gray-900);
+    --text-body: var(--gray-800);
+    --text-second: var(--gray-700);
+    --text-disabled: var(--gray-500);
   }
 
   .dark {
@@ -64,6 +83,27 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
+
+    /* Bepyan colours */
+    --gray-50: #000;
+    --gray-75: #141414;
+    --gray-100: #1d1d1d;
+    --gray-200: #303030;
+    --gray-300: #4b4b4b;
+    --gray-400: #6a6a6a;
+    --gray-500: #8d8d8d;
+    --gray-600: #b0b0b0;
+    --gray-700: #d0d0d0;
+    --gray-800: #ebebeb;
+    --gray-900: #fff;
+    --gray-950: #fff;
+
+    --page-background: var(--gray-75);
+
+    --heading: var(--gray-900);
+    --text-body: var(--gray-800);
+    --text-second: var(--gray-600);
+    --text-disabled: var(--gray-500);
   }
 }
 
@@ -73,5 +113,47 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* ---- scrollbar ---- */
+  * {
+    --scrollbar-size: 16px;
+    --scrollbar-size-min: 44px;
+    --scrollbar-color: var(--gray-200);
+    scrollbar-color: var(--scrollbar-color) transparent;
+    /* firefox */
+    scrollbar-width: thin;
+  }
+
+  ::-webkit-scrollbar {
+    width: var(--scrollbar-size);
+    height: var(--scrollbar-size);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    min-width: var(--scrollbar-size-min);
+    min-height: var(--scrollbar-size-min);
+    border: 5px solid transparent;
+    border-radius: var(--scrollbar-size);
+    background-clip: padding-box;
+    background-color: var(--scrollbar-color);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    --scrollbar-color: var(--gray-300);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    --scrollbar-color: var(--gray-300);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-button,
+  ::-webkit-scrollbar-corner,
+  ::-webkit-resizer {
+    display: none;
   }
 }
