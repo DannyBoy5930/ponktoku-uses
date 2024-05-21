@@ -4,6 +4,8 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { HamburgerMenuIcon } from "@radix-ui/react-icons";
@@ -17,21 +19,24 @@ export default function CategoryDropdown({
 }: CategoryDropdownProps) {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      <DropdownMenuTrigger asChild>
         <Button variant="ghost" size="icon">
-          <HamburgerMenuIcon className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+          <HamburgerMenuIcon className="h-5 w-5 rotate-0 scale-100 transition-all" />
           <span className="sr-only">Category dropdown</span>
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent>
+      <DropdownMenuContent align="end">
+        <DropdownMenuLabel className="text-orange-500">
+          Categories
+        </DropdownMenuLabel>
+        <DropdownMenuSeparator />
         {categories.map((category) => {
           return (
-            <DropdownMenuItem
-              key={category}
-              className="justify-between capitalize"
-            >
-              {category}
-            </DropdownMenuItem>
+            <a key={category} href={`/posts/category/${category}`}>
+              <DropdownMenuItem className="justify-between capitalize">
+                {category}
+              </DropdownMenuItem>
+            </a>
           );
         })}
       </DropdownMenuContent>
