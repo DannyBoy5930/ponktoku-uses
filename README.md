@@ -2,6 +2,8 @@
 
 A curated list of tech that I use, built with Astro
 
+![website thumbnail](./docs/ponktoku-uses-thumb.jpg)
+
 ## Tech Stack
 
 - [Astro](https://astro.build) - SSG/SSR website framework
