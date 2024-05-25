@@ -9,10 +9,8 @@ const postsCollection = defineCollection({
       description: z.string(),
       createdAt: z.date(),
       updatedAt: z.date(),
-      image: z.object({
-        url: image(),
-        alt: z.string(),
-      }),
+      imageUrl: image(),
+      imageAlt: z.string(),
       category: z.string(),
     }),
 });
